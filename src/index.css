@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+
+  --color-bee-yellow: #FBBF24;
+  --color-bee-dark: #1F2937;
+  --color-bee-green: #065F46;
+  --color-bee-earth: #78350F;
+  --color-bee-cream: #FFFBEB;
+}
+
+@layer base {
+  body {
+    @apply bg-bee-cream text-bee-dark font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-xl;
+}
+
+.btn-primary {
+  @apply bg-bee-yellow hover:bg-yellow-500 text-bee-dark font-bold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2;
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-gray-50 text-bee-dark font-bold py-4 px-8 rounded-full border-2 border-bee-yellow transition-all transform hover:scale-105 shadow-md flex items-center justify-center gap-2;
+}
+
+.section-padding {
+  @apply py-20 px-6 md:px-12 lg:px-24;
+}
